@@ -1,0 +1,21 @@
+html 
+    body
+    if (productos.length > 0)
+      table
+        thead
+          tr
+            th='ID'
+            th="Producto"
+            th="Precio"
+            th="URL"
+        tbody
+          each producto in productos
+            tr
+              td= producto.id
+              td= producto.producto
+              td= producto.precio
+              td= producto.url
+      a(href="/") 
+        button="Volver al formulario"
+    else
+      div="No hay productos para mostrar"
